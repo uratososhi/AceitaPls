@@ -7,10 +7,10 @@ audio.play();
 muteButton.addEventListener("click", () => {
   if (audio.muted) {
     audio.muted = false;
-    muteButton.src = "Images/speaker-on.png";
+    muteButton.src = "AceitaPls/Images/speaker-on.png";
   } else {
     audio.muted = true;
-    muteButton.src = "Images/speaker-off.png";
+    muteButton.src = "AceitaPls/Images/speaker-off.png";
   }
 });
 
