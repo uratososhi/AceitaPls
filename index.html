@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>POC de CORS</title>
-</head>
-<body>
-  <h1>POC de CORS</h1>
+  <head>
+    <title>❤️</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <button onclick="testarCors()">Testar CORS</button>
+  <body>
+    <center><h1 id="pergunta">Bora dar um rolê?</h1></center>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <button id="yesButton">👍</button>
+      <button id="noButton">👎</button>
+    </center>
 
-  <pre id="resultado"></pre>
+    <audio id="Background-music" autoplay loop>
+      <source src="Background-Music.mp3" type="audio/mp3" />
+    </audio>
 
-  <script>
-    function testarCors() {
-      const url = "https://api.sharpify.com.br.com/auth/session/current-user";
+    <img id="muteButton" src="speaker-on.png" alt="Mute/Unmute" />
 
-      fetch(url, {
-        method: "GET",
-        credentials: "include" 
-      })
-        .then(async res => {
-          const text = await res.text();
-          document.getElementById("resultado").textContent =
-            "STATUS: " + res.status + "\n\n" +
-            "Resposta liberada pelo navegador:\n\n" + text;
-        })
-        .catch(err => {
-          document.getElementById("resultado").textContent =
-            "O navegador BLOQUEOU por CORS:\n\n" + err;
-        });
-    }
-  </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
